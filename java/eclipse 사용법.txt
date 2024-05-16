@@ -1,0 +1,13 @@
+//객체언어는 파스칼표기법으로 표시(class뒤에 대문자로 시작)
+//class이름과 .java 파일 이름은 일치해야한다. 일치하지 않으면 문법 오류이다.
+
+//프로그램 실행
+//ctrl + f11
+
+//ctrl + space 자동완성
+//main : ctrl + space
+//자바 프로그램의 시작 끝을 명시하는 method(함수)
+//main method가 호출 되고 기능이 완료되면 자바 프로그램도 종료
+
+//alt + s + a  생성자 자동완성
+//alt + s + r  Getter & Setter 자동완성

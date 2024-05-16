@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#wrapper{
+            width: 900px;
+            /* 최소 높이 */
+            min-height: 300px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        /* 쉼표로 구분하며 동일한 스타일 설정해줄 수 있음, 외곽선으로 범위 보이게하기 */
+        header, footer, nav, aside, section{
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        header{
+            height: 50px;
+            background-color: skyblue;
+            /* 컨텐츠간에 여백을 주려고함 */
+            margin-bottom: 10px;
+        }
+
+        main{
+            /* 컨텐츠를 다 표현하지 못할때 범위를 벗어나는 컨텐츠는 어떻게 할건지 */
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        aside, section, nav{
+            /* 같은 라인에 같이 배치되도록 */
+            float: left;
+            box-sizing: border-box;
+            height: 500px;
+        }
+
+        nav, aside{
+            background-color: pink;
+            width: 100px;
+        }
+
+        nav{
+            margin-right: 10px;
+        }
+
+        aside{
+            margin-left: 10px;
+        }
+
+        section{
+            /* 전체(900px)에서 nav,여백,section,여백,aside 뺀다.
+            여백 없애려면 680-6px 빼거 적던지, 계산하기 귀찮으면 aside, section, nav에 box-sizing으로 여백 없애기 */
+            width: 680px;
+            background-color: lightgreen;     
+        }
+
+        footer{
+            background-color: skyblue;
+            height: 50px;
+        }
+
+        nav ol{
+            /* list 목록표기x */
+            list-style: none;
+            /* list에 기본적으로 가지는 여백 제거 */
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ol li{
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ol li:hover{
+            color:#000;
+            cursor:pointer;
+        }
+
+        article{
+            width: 90%;
+            margin: 20px;
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <!-- div#wrapper -->
+    <div id="wrapper">
+        <header>
+            <p>header</p>
+        </header>
+        <main>
+            <nav>
+                <p>nav</p>
+                <!-- ol>li{menu-$}*3 -->
+                <ol>
+                    <li>menu-1</li>
+                    <li>menu-2</li>
+                    <li>menu-3</li>
+                </ol>
+            </nav>
+            <section>
+                <p>section</p>
+                <!-- 본문 내용이 출력되는곳 -->
+                <article>
+                    <p>article</p>
+                    <!-- p>lorem100 -->
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam nobis deleniti autem architecto eos eius veniam inventore. Rerum eligendi necessitatibus ab libero molestias, nostrum error at vitae excepturi earum sapiente vero modi, quos debitis ex doloribus pariatur consequuntur magni, ipsum eum! Vero rem officia asperiores, sit odit numquam error reprehenderit aliquam qui pariatur! Natus adipisci facilis autem cumque. Quos dolorem nulla deleniti amet architecto distinctio reiciendis enim ut expedita, ipsa molestiae pariatur nemo facilis, animi a id veniam incidunt praesentium quasi sint! Maxime eligendi dolores numquam at, saepe veniam sed ut, harum blanditiis doloremque distinctio libero praesentium excepturi nihil!
+                    </p>
+                </article>
+            </section>
+            <aside>
+                <p>aside</p>
+            </aside>
+        </main>
+        <footer>
+            <p>footer</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- menu 색깔 바꾸기 : 기본-검은색, 커서-흰색 -->

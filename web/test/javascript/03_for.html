@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //document.write();
+    for(let i = 6 ; i >= 1; i--){
+        //i : 6 5 4 3 2 1
+        let text = "<h"+i+">Hello World!!!</h"+i+">";
+        document.write(text);
+
+        /*
+        document.write("<h"+i+">");
+        document.write("출력된 내용입니다.");
+        document.write("</h"+i+">");
+        */
+
+        //template문자열 표현[ `` :백틱]
+        document.write(`<h${i}>Hello World!!!</h${i}>`);
+    }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버</a> <br/>
+    <!-- 우리가 가진거 말고 외부에 있는거라는걸 알려줄때는 http://를 표시한다, http로 해야 웹 읽을 수 있음(통신규약), 
+        https:보안기능이 추가된 것 -->
+
+    <!-- 앞에 아무것도 안붙는것 : a태그가 붙는 문서와 같은 폴더(동일위치)에 있다는 의미 -->
+
+    <!-- 상대 경로)
+        ../../두 단계 위 폴더 
+         ../ 한 단계 위 폴더
+         ./ 현재 폴더
+    경로 지정 없을 시에도 현재 폴더를 기준으로 파일 검색 -->
+
+    <a href="html_h_p.html">html_h_p.html</a>
+    <a href="./sample.html" target="_blank">sample.html</a>
+
+    <!-- target="_self" 현재페이지에 화면 출력 기본값 -->
+    <!-- target="_blank" 새로운 창에 화면 출력 -->
+
+    <a href="#content2">content2 보기</a>
+    <!-- # : 동일한 페이지에서 id속성을 content2(이름 바뀔 수 있음)로 부여한 곳에 이동하는것 -->
+
+    <!-- p태그에 id : 태그 요소를 구분할 수 있게 부여하는 것 -->
+    <p id="content1">
+        <!-- lorem*4 는 의미없는 텍스트 4번 표시 -->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis dicta maxime itaque deleniti quod doloribus ab obcaecati voluptates molestias nobis asperiores molestiae aspernatur ipsum aliquam quibusdam, quas blanditiis aliquid perferendis.
+        Dicta eos culpa asperiores quisquam dignissimos qui ducimus facilis perferendis esse exercitationem! Asperiores tenetur sint minus nobis, rem quaerat ipsam amet, distinctio debitis in autem voluptatum est nulla dolorum et?
+        Voluptas repellendus a pariatur excepturi dolore praesentium aperiam reprehenderit eligendi, iusto impedit numquam natus sunt, aliquam asperiores, ullam saepe autem blanditiis rerum odio enim magni ducimus explicabo? Tenetur, dicta dolorem?
+        Repellendus dignissimos inventore placeat totam repellat quos mollitia? Minus deserunt architecto quis veritatis consectetur fugit ex eum quo asperiores autem! Placeat aliquam obcaecati ab commodi minus neque quae est ex!
+    </p>
+
+    <p id="content2">
+        <!-- lorem*5 -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a assumenda deleniti praesentium exercitationem eaque consequuntur officiis iste autem aliquam eum excepturi reprehenderit fugit, eos aspernatur! Similique eligendi corporis suscipit?
+        Dignissimos amet totam officia expedita commodi ea consectetur unde suscipit reiciendis quas hic eaque fugit perspiciatis minima delectus ipsam, numquam rem? Ratione voluptate nam maxime quaerat atque at, optio nesciunt.
+        Blanditiis soluta incidunt fugiat eveniet magnam dolores labore modi nesciunt officiis dolorum. Unde, quia sapiente! Ad, corrupti fugit possimus mollitia, iure doloribus impedit soluta ratione explicabo velit porro, ducimus nostrum?
+        Distinctio quos amet inventore in, quo at autem aperiam, ea laborum est animi voluptatum iusto nesciunt consequuntur harum tempora cumque. Veniam delectus animi vero culpa incidunt, sapiente voluptate perspiciatis at.
+        Laudantium sequi saepe accusamus dolores pariatur, ea cupiditate, commodi expedita dignissimos ipsum itaque possimus molestiae doloribus dolorum dolore tempore exercitationem quidem voluptatibus distinctio tenetur animi a. Pariatur accusamus doloribus id?
+    </p>
+    <hr/>
+
+    <a href="#content1">content1 로 이동</a>
+
+</body>
+</html>

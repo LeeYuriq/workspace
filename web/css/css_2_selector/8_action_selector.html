@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+        }
+
+        /* h1 태그요소에 마우스가 over되었을때 */
+        h1:hover{
+            color: blue;
+
+            /* 마우스 포인터 모양 */
+
+            cursor: text; 
+            /* 문자열을 지정한것처럼 문자 선택자 모양 */
+            cursor: pointer;
+            /* 반응이 가능한 것을 의미하는 것 처럼 손가락모양 생성 */
+            cursor: zoom-in;
+            cursor: zoom-out;
+            /* 돋보기 모양 */
+            cursor: copy;
+            /* ++모양 */
+        }
+
+        h1:active{
+            color: orange;
+        }
+
+        /* input태그 요소 중 disabled 상태인 요소 */
+        input:disabled{
+            background-color: lightgray;
+        }
+
+        /* 
+        input태그 요소 중 활성화 상태인 요소
+        */
+        input:enabled{
+            color: white;
+            background-color: pink;
+        }
+        
+        /* 값을 수정 못하는 요소 */
+        input:read-only{
+            color: skyblue;
+            background-color: hotpink;
+        }
+
+        /* 사용자와 상호작용중인 입력폼 */
+        input:focus{
+            background-color: white;
+            color: gray;
+            outline-color: aqua;
+            /* solid 실선, dotted 점선, dashed 굵은 점선 */
+            outline-style: dotted;
+            /* 선 굵기 */
+            outline-width: 1mm;
+            /* 아웃라인 사용안함 */
+            outline: none;
+            /* 입력폼 포커스 안됐을 때 외곽선 */
+            border: none;
+        }
+
+        .accept:checked{
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>반응-상태 선택자</h1>
+    <h2>사용 가능-enavled</h2>
+    <input type="text" placeholder="이곳은 아이디 작성공간" />
+    
+    <h2>사용불가능-disabled</h2>
+    <input type="text" value="aaa" disabled />
+
+    <h2>읽기 전용-read-only</h2>
+    <input type="text" value="bbb" readonly />
+    <hr/>
+    <label>
+        <input type="checkbox" class="accept" checked/> checkbox
+    </label>
+
+</body>
+</html>

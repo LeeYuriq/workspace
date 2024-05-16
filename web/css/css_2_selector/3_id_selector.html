@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id 속성 선택자(#)</title>
+    <style>
+        div{
+            /* border : 외곽선 : 선 굵기, 선 스타일, 선 색상 */
+            border: 1px solid black;
+        }
+
+        /* 
+        id 속성에 부여된 값이 "header"인 태그 요소 
+        keyword : #
+        */
+        #header{
+            /* 태그요소의 폭(너비) */
+            width: 800px;
+            background-color: yellow;
+        }
+
+        #wrap{
+            width:800px;
+        }
+        /* asdie[어사이드] */
+        #aside{
+            width: 30%;
+            background-color: blue;
+        }
+
+        #content{
+            width: 70%;
+            background-color: red;
+        }
+        /* div[id=aside]{ */
+        div{    
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>#header tag</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>#aside tag</h1>
+        </div>
+        <!-- id 속성에 부여될 수 있는 값은 유일하다.
+        하나만 작성 가능 하고 이를 어길 시에는 id속성이 무시된다. -->
+        <div id="content aside">
+            <h1>#content tag</h1> 
+        </div>
+        <div id="content">
+            <h1>#content tag</h1>
+        </div>   
+    </div>
+</body>
+</html>
+
+<!-- 물어볼 것 :
+1. aside~content 배경.
+2. content 위에꺼 밑에꺼랑 다른색. -->
+<!-- 완료 -->

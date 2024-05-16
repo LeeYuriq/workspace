@@ -1,0 +1,46 @@
+<!-- css/css_1_basic/test_internal.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부 스타일 시트</title>
+    <!-- inline방식이 하나씩 지정해야해서 불편하기 때문에 나온것이
+    internal(내부스타일시트) - head 부분에 함 -->
+
+    <!-- 선택자 : 스타일에 선택된 태그 -->
+
+    <!-- {}중괄호 -->
+    <link rel="stylesheet" href="test.css"/>
+    <style>
+        h1{
+        color:skyblue;
+        background-color: pink;
+        }
+        
+        h3{
+            color: aquamarine;
+            background-color: burlywood;
+        }
+
+        span{
+            color: red;
+        }
+    </style>
+    
+    <!-- 뒤에있는 방식이 적용된다. -->
+
+</head>
+<body>
+    <h1>Internal Style Sheet</h1>
+    <h2>HTML 문서 내부에서 스타일 적용</h2>
+    <!-- (h3>(span{internal}{css}))*5 -->
+    <h3><span>internal</span>css</h3>
+    <h3><span>internal</span>css</h3>
+    <h3><span>internal</span>css</h3>
+    <h3><span>internal</span>css</h3>
+    <h3><span>internal</span>css</h3>
+
+    
+</body>
+</html>

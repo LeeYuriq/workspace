@@ -1,0 +1,50 @@
+/*
+	2_4.html �� css �ۼ�
+*/
+
+.wrap{
+	padding:0;
+	width: 1100px;
+	background-color: lightgray;
+	margin: 0 auto;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+header, footer{
+	background-color: lightsalmon;
+	/* 자식요소가 부모요소 크기를 벗어나면 숨긴다 */
+	overflow: hidden;
+}
+
+nav{
+	background-color: lightgreen;
+}
+
+aside{
+	background-color: lightblue;
+	width: 23%;
+}
+
+section{
+	background-color: mistyrose;
+	width: 48%;
+}
+
+article{
+	background-color: pink;
+	height: 500px;
+}
+
+aside, section{
+	float: left;
+	height: 700px;
+	padding: 1%;
+}
+
+footer{
+	/* left, right, both */
+	clear:left
+}

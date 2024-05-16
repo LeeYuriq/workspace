@@ -1,0 +1,78 @@
+/*
+	2_4.html �� css �ۼ�
+*/
+
+*{
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.wrap{
+	background-color: #feffa8;
+}
+
+nav{
+	background-color: lightgreen;
+}
+
+header>h1, header>nav>h2, main>h1, footer>h1{
+	text-align: center;
+}
+
+header>nav{
+	margin-bottom: 20px;
+}
+
+header>h1{
+	line-height: 100px;
+}
+
+aside>nav{
+	width: 280px;
+}
+
+main{
+	background-color: lightgray;
+}
+
+main>h1{
+	line-height: 80px;
+}
+
+aside{
+	width: 300px;
+	background-color: skyblue;
+}
+
+section{
+	width: 500px;
+	background-color: pink;
+}
+
+aside, section{
+	float: left;
+    height: 500px;
+}
+
+aside>h2, section>h2{
+	line-height: 80px;
+}
+
+article{
+	width: 480px;
+	height: 350px;
+	background-color: blanchedalmond;
+}
+
+footer>h1{
+	padding-bottom: 20px;
+}
+
+aside>h2{
+	margin-left: 35%;
+}
+
+aside>nav>h2, section>h2, section>article>h2{
+	margin-left: 40%;
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body에서 table태그 사용할때 tbody를 쓰지 않아도 브라우저에서 자동으로 tbody를 넣어준다.
+        그러나 style에서 table에 자세한 선택자를 쓸때
+        tbody를 써줘야 지정한 디자인이 적용된다. */
+        table>tbody>tr>td{
+            color: blue;
+        }
+
+        #content .red{
+            color: red;
+        }
+
+        #skyblue{
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>좋아하는 과일</th>
+            <th>싫어하는 과일</th>
+            <th>기타</th>
+        </tr>
+        <!-- table>tr>td -->
+        <tr id="content">
+            <td>오렌지</td>
+            <td class="red" id="skyblue">포도</td>
+            <td>사과</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <!-- value : 미리 값을 넣어놓을 수 있다. -->
+         <input type="text" value="id001" /> <br/>
+         <input type="text" value="100" disabled /> <br/>
+        <!-- disabled : 사용하지 않는다, 변경을 막는다 -->
+        <input type="text" value="200" readonly /> <br/>
+        <!-- readonly : 읽을수만 있고 수정할 수 없다 -->
+        <input type="password" placeholder="비밀번호 작성" /> <br/>
+        <!-- placeholder : 입력필드의 백그라운드에서 사용자가 무엇을
+        입력해야하는지 알려주는 것, 힌트-->
+        <input type="text" autofocus /> <br/>
+        <!-- focus : 사용자와 상호작용될 준비가 된 상태 -->
+        <hr/>
+
+        <!-- label[레이블] : 입력 + 체크박스 같이 동작하도록 묶어줄 수 있음(마우스커서 모양이 바뀜) -->
+        <label>
+        <input type="checkbox" checked/>동의하시겠습니까?
+        <!-- checked : 체크박스 체크되게 나옴 -->
+        </label>
+
+        <br/>
+        <input type="checkbox" id="accept" />
+        <label for="accept">탈퇴하시겠습니까?</label>
+        <br/>
+        <hr/>
+        <input type="checkbox" name="dogs" /> 진돗개
+        <input type="checkbox" name="dogs" /> 푸들
+        <input type="checkbox" name="dogs" /> 풍산개 <br/>
+        <input type="radio" name="fruit" checked/> 딸기
+        <input type="radio" name="fruit" /> 포도
+        <!-- radio : type이 radio인 입력요소는 name 속성값이 일치하는 요소끼리 그룹화 됨 -->
+        <br/>
+        <input type="radio" name="car" checked/> K3
+        <input type="radio" name="car" /> 싼타페
+        <input type="radio" name="car" /> GV80
+        <br/>
+        <!-- 내부의 입력 요소를 묶어 주는 역할 -->
+        <fieldset disabled>
+            <!-- 필드셋의 제목 지정 -->
+            <legend>SELECT BOX</legend>
+            <select>
+                <!-- 해당 옵션이 선택된 상태로 출력 : selected -->
+                <option>오렌지</option>
+                <option selected>사과</option>
+                <option>한라봉</option>
+            </select>
+            <!-- multiple : ctrl을 누른채로 항목을 선택하면 여러개 선택가능 -->
+            <select name="hobby" multiple>
+                <optgroup label="게임">
+                    <option>LOL</option>
+                    <option>던파</option>
+                    <option>와우</option>
+                </optgroup>
+                <optgroup label="study">
+                    <option>HTML</option>
+                    <option>JAVA</option>
+                    <option>경제</option>
+                    <option>역사</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br/>
+        <h3>Data List</h3>
+        <!-- datalist : 입력한 값과 일치하는 값이 선택될 수 있도록하는것  -->
+        <datalist id="dept_list">
+            <option value="컴퓨터공학과"></option>
+            <option value="국어국문학과"></option>
+            <option value="사학과"></option>
+            <option value="사회체육학과"></option>
+            <option value="영어영문학과"></option>
+        </datalist>
+        <input list="dept_list" />
+        <br/>
+        <hr/>
+        <h3>파일 입력 필드</h3>
+        <input type="file" />
+        <!-- file에 multiple 속성을 부여하면 여러가지 파일을 고를 수 있다 -->
+        <h4>multiple</h4>
+        <input type="file" multiple/>
+        <h4>accept-파일 타입 제한</h4>
+          <!-- accept 속성 = 파일의 대분류/소분류, .확장자명 -->
+        <input type="file" accept="text/html" />
+        <input type="file" accept=".html" />
+        <br/>
+        <!-- 여러행에 걸쳐 텍스트를 입력받는 요소 -->
+        <textarea cols="50" rows="5"></textarea>
+    </form>
+
+    <form>
+        <h3>HTML5 입력태그 요소</h3>
+            <!-- 날짜형식 -->
+            <!-- required : 필수 값 -->
+            <input type="date" required/> <br/>
+            <!-- 이메일 형식 -->
+            <input type="email" /> <br/>
+            <!-- 숫자 형식 -->
+            <input type="number" /> <br/>
+            <!-- 범위 슬라이더 -->
+            <input type="range" min="-50" max="100" value="0" />
+            <br/>
+            <!-- 색상 코드 -->
+            <input type="color" /> <br/>
+            <!-- 검색 상자 : 일반텍스트와 같은데 오른쪽 끝에 엑스표시 있음 -->
+            <input type="search" /> <br/>
+
+            <!-- form 태그 내부의 데이터를 제출하는 버튼 -->
+            <input type="submit" /> <br/>
+    </form>
+</body>
+</html>

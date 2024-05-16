@@ -1,0 +1,65 @@
+<!-- 2_type_selector.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type tag 선택자</title>
+    <style>
+        /* 내부 스타일 */
+        body{
+            background-color: aquamarine;
+        }
+
+        header{
+            background-color: skyblue;
+        }
+
+        body{
+            background-color: pink;
+        }
+
+        article{
+            background-color: orange;
+        }
+
+        ul{
+            background-color: red;
+        }
+
+        li{
+            background-color: blue;
+        }
+
+        h1, h2{
+            background-color: aliceblue;
+        }
+        /* 같은 디자인을 적용시킬 때 디자인이 들어가는 중괄호 앞에 태그를 적고 쉼표로 구분해주면 여러번 작성 할 필요 없이 동일한 디자인이 적용 될 수 있다. */
+        /* h2{
+            background-color: aliceblue;
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HEADER</h1>
+        <nav>
+            <!-- ul>li{메뉴-$}*3 -->
+            <ul>
+                <li>메뉴-1</li>
+                <li>메뉴-2</li>
+                <li>메뉴-3</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>SECTION</h2>
+            <article>ARTICLE</article>
+            <article>ARTICLE</article>
+        </section>
+    </main>
+    <aside>ASIDE</aside>
+    <footer>FOOTER</footer>
+</body>
+</html>

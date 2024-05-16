@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  * : 문서 안에 있는 모든 태그 요소 */
+        *{
+            color: greenyellow;
+        }
+
+        h1{
+            color: red;
+        }
+
+        /* id 속성 = #아이디값(한 개O, 여러개X)
+           class 속성 = .class속성값(별명같은것, 공백을 기준으로 여러개 가질 수 있음)  */
+
+
+        #bg{
+            background-color: skyblue;
+        }
+
+        #color{
+            color: blue;
+        }
+
+        .size{
+            /* 글자크기 50으로 지정, 기본값 = 16px */
+            font-size: 50px;
+        }
+
+        .color{
+            color:pink;
+        }
+
+        /*  동일 선택자라고 하면 아래쪽에 정의된 디자인 속성이 적용 선택자가 상이 하다고 하면
+           'inline > id > class> type(태그)'
+          선택자 순으로 우선순위가 적용된다  */
+
+    </style>
+</head>
+<body>
+    <h1>Type(태그) 선택자</h1>
+    <!-- h2{선택자 적용}*4 -->
+    <h2 id="bg">선택자 적용</h2>
+    <!-- id 속성에 부여될 수 있는 값은 1개 -->
+    <h2 id="color bg">선택자 적용</h2>
+    <h2 class="color">선택자 적용</h2>
+    <!-- class 속성에는 공백을 기준으로 다양하게 적용 가능 -->
+    <h2 style="color: black;" id="color" class="size color">선택자 적용</h2>
+
+</body>
+</html>

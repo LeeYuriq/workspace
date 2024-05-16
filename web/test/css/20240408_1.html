@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            /* list앞에 번호나 기호가 사라짐 */
+            list-style: none;
+            /* 기본적으로 부여된 안쪽여백 제거, 기호와 글자사이 */
+            padding-left: 0;
+        }
+
+        /* 전체를 감싸고있는 걸로 너비 지정 */
+        nav{
+            width:1000px;
+            /* 상하 좌우  : 좌우는 동일한 여백을 가질 수 있도록 */
+            margin: 20px auto;
+        }
+
+        /* li는 위에서 아래로 쌓이는 block요소라서 옆으로 나열되는걸로 바꿔준다 : display 또는 float 사용*/
+        ol li{
+            border: 1px solid black;
+            /* 전체가  1000px이니 li 4개 각각 250씩 크기를 부여한다 */
+            width: 250px;
+            height: 50px;
+            /* 외곽선을 포함해서 박스의 크기를 지정할 수 있음*/
+            box-sizing :border-box;
+            float: left;
+            /* display: inline-block; display에서 inline-block지정시 박스에서 공백이 발생한다 */
+            /* 텍스트로 발생한 공백 -4px ~ -6px을 적용시킨다 */
+            /* margin-left: -6px; */
+            background-color: gray;
+            color: white;
+            /* 글자 정렬 */
+            text-align: center;
+            /* 줄 간격, 수직 정렬 : 라인이 하나밖에 없을 때 사용 */
+            line-height: 50px;
+        }
+
+        /* li태그에 마우스가 올라갔을때 어떻게 표현될 것인지 */
+        ol li:hover{
+            background-color: white;
+            color: gray;
+            /* 커서 모양 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav>ol>li{menu-$}*4 -->
+    <!-- nav로 list를 묶어준다 -->
+    <nav>
+        <ol>
+            <!-- li를 붙여쓰지않고, 한줄씩 차지하면 inline-block을 사용했을 시 공백이 발생한다. -->
+            <li>menu-1</li>
+            <li>menu-2</li>
+            <li>menu-3</li>
+            <li>menu-4</li>
+        </ol>
+    </nav>
+</body>
+</html>

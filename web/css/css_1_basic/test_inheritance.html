@@ -1,0 +1,46 @@
+<!-- css/css_1_basic/test_inheritance.html -->
+
+<!-- inheritance[인허리턴스] : 상속, 
+상위 태그 요소가 그대로 물려받아쓴다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        header{
+            color: red;
+        }
+
+        /* 자식요소 : 맞붙어있는 태그요소, 자손요소 : 안에 있는 모든 태그 요소 */
+
+        /* 꺽새>가 들어가면 자식태그요소, 없으면 자손태그요소 */
+
+        /* header안에 있는 h1을 의미 */
+
+        /* initial : 물려받은 디자인 제거하고 브라우저에서 제공하는 초기값을 사용, 
+        따로 지정하지않으면 inherit이 기본값 */
+        header>h1{
+            /* color: initial; */
+            color:inherit;
+        }
+    </Style>
+
+</head>
+<body>
+    <header>
+    TITLE
+        <h1>HEADER - 1</h1>
+        <div>
+        <span>Span</span>
+        <h1>Header 안에 div 안에 h1</h1>
+    </div>
+    </header>
+    <h1>OUTER HEADER</h1>
+
+
+
+    
+</body>
+</html>

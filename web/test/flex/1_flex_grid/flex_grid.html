@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<HTML>
+ <HEAD>
+  <TITLE> FLEX </TITLE>
+  <META charset="utf-8">
+	<style>
+		header>h1{
+			text-align: center;
+		}
+
+		.wrap{
+			margin: 0 auto;
+			align-items:center;
+			width: 912px;
+			border: 1px solid red;
+		}
+
+		.menus{
+			display: grid;
+			grid-gap: 3px;
+			grid-template-columns:1fr 1fr 1fr;
+		}
+
+		.menu{
+			width: 300px;
+			height: 150px;
+			border: 1px solid gray;
+		}
+
+		.menu1{
+			
+			background:url(img/dish1.jpg) no-repeat center;
+			background-size: cover;
+		}
+		
+
+		.menu2{
+			background:url(img/dish2.jpg) no-repeat center;
+			background-size: cover;
+		}
+
+		.menu3{
+			background:url(img/dish3.jpg) no-repeat center;
+			background-size: cover;
+		}
+
+		.menu4{
+			background:url(img/dish4.jpg) no-repeat center;
+			background-size: cover;
+		}
+
+		.menu5{
+			background:url(img/dish5.jpg) no-repeat center;
+			background-size: cover;
+			grid-column: 2 / 4;
+		}
+
+		footer{
+			/* padding: 50px 400px; */
+			border: 1px solid gray;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</HEAD>
+ <BODY>
+	<div class="wrap">
+		<header>
+			<h1>솔로의 식탁</h1>
+		</header>
+		<article>
+			<div class="menus">
+				<div class="menu menu1">					
+				</div>
+				<div class="menu menu2">					
+				</div>
+				<div class="menu menu3">					
+				</div>
+				<div class="menu menu4">					
+				</div>
+				<div class="menu menu5">					
+				</div>
+			</div>
+		</article>
+		<footer>
+			<p>솔로의 식탁</p>
+		</footer>
+	</div>
+ </BODY>
+</HTML>
+<script>
+</script>
+
+<!-- 칵테일 사진 크기 못맞춤, 맞추면 다른 사진이 튀어나감 -->

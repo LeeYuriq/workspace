@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        body{
+            height: 1700px;
+            background-image: url(../../img/bonobono.jpg);
+            /* 배경-반복설정 */
+            background-repeat: repeat;
+            /* 배경을 x축으로 반복 */
+            background-repeat: repeat-x;
+            /* 배경을 y축으로 반복 */
+            background-repeat: repeat-y;
+            /* 배경을 반복하지 않음 */
+            background-repeat: no-repeat;
+            /* top  bottom  left  right  center*/
+            background-position: center;
+            background-position: top 10px right 50px;
+            /* attachment 부착
+               scroll  스크롤과 같이 이동
+               fixed 브라우저에 고정 */
+            background-attachment: fixed;
+            background-size: 200px 100px;
+            /* url만 지정하여 나머지는 다 사라짐 */
+            background:url(../../img/bonobono.jpg);
+        }
+
+        .bg{
+            /* RGBA(red,green,blue,alpha)
+               alpha는 투명도 0 ~ 1.0 까지의 실수로 지정
+               0 투명 ~ 1 불투명 */
+            background-color: rgba(100, 30, 50, 0.5);
+            width: 300px;
+            height: 300px;
+            /* 태그요소에 투명도 지정, 기능은 rgba의 alpha와 동일
+               0 투명 ~ 1 불투명 */
+            /* opacity: 0.5; */ 
+        }
+
+        .img{
+            width: 30%;
+            background-image: url(../../img/intro/lion.png);
+            background-repeat: no-repeat;
+            background-size: 300px ;
+            /* 너비 높이중 큰쪽이 꽉차는 만큼 이미지 크기 표현, 자동맞춤 */
+            background-size: contain;
+            /* 배경이미지로 전체를 체움, 이미지가 잘려도 크기만큼만 꽉 채움 */
+            background-size: cover;
+
+            background: rgba(255,192,203,0.5) 
+            url(../../img/intro/lion.png ) no-repeat 
+            top 50% left 50% / cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <img src="../../img/banana.png" width="200" height="200" alt="바나나이미지"/>
+    </div>
+    <!-- div.img.bg -->
+    <div class="img bg">
+        <h1>content space</h1>
+    </div>
+</body>

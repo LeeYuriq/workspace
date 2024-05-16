@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //비교연산자
+        //좌변과 우변의 값을 비교하여
+        //수식의 결과가 참인지 거짓인지를 boolean 타입으로 반환
+        //결과는 true(참) 아니면 false(거짓) 둘중에 하나
+        /*
+            비교연산자 - 좌항과 우항의 크기를 비교
+            좌항 > 우항 : 좌항의 값이 우항 보다 크면 참
+            좌항 < 우항 : 우항의 값이 좌항보다 크면 참
+            좌항 >= 우항 : 좌항의 값이 크거나 우항과 같으면 참
+            좌항 <= 우항 : 우항의 값이 크거나 좌항과 같으면 참
+
+            동등비교연산자 - 좌항과 우항의 값이 일치하는지 비교
+            좌항 == 우항 : 좌항과 우항의 값이 일치하면 true(참)
+            좌항 != 우항 : 좌항과 우항의 값이 일치하지않으면 true(참)
+        */
+       let num1 = 100;
+       let num2 = 200;
+       //num1의 값이 num2의 값보다 크거나 같은가?
+       let result = num1 >= num2;
+       document.write("<h1>num1과 num2의 크기 비교</h1>");
+       document.write("num1 : " + num1 + "<br/>");
+       document.write("num2 : " + num2 + "<br/>");
+       document.write("num1 >= num2 : " + result + "<br/>");
+       //num1의 값이 num2의 값보다 큰가?
+       result = num1 > num2;
+       document.write("num1 > num2 : " + result + "<br/>");
+       //num2의 값이 num1의 값보다 크거나 같은가?
+       result = num1 <= num2;
+       document.write("num1 <= num2 : " + result + "<br/>");
+       //num2의 값이 num1의 값보다 큰가?
+       result = num1 < num2;
+       document.write("num1 < num2 : " + result + "<br/>");
+        
+
+       //동등비교연산
+       //==, !=
+       const strAge = '26';
+       const numAge = 26;
+       //좌항과 우항의 값이 일치하는가?
+       result = strAge == numAge;
+       console.log("strAge == numAge : ", result);// 결과 : true
+
+       //좌항과 우항의 값이 일치하지 않는가?
+       result = strAge != numAge;
+       console.log("strAge != numAge : ", result);// 결과 : false
+        
+       //===, !==       좌항과 우항의 데이터 타입 까지 비교
+
+       //좌항과 우항의 데이터타입과 값이 일치하는가?
+       result = strAge === numAge;
+       console.log("strAge === numAge : ", result);// 결과 : false
+
+       //좌항과 우항의 데이터타입과 값이 일치하지 않는가?
+       result = strAge !== numAge;
+       console.log("strAge !== numAge : ", result);//결과 : true
+
+        /*
+            논리 비교 연산자
+            단항 또는 이항연산자로서 좌항과 우항의 논리값을 비교하는 연산자 - 좌항과 우항의 true false 값을 비교해서 논리값을 출력하는 연산자
+
+            단항연산자 - 항이 하나인 연산자
+            ! : 논리 부정
+            !true == false
+            !false == true
+
+            이항연산자 
+            || : (shift + 원화표시) - 논리 합 연산자(or 연산자)
+            && : 논리 곱(and 연산자)
+            좌항과 우항 논리 값을 비교해서 boolean 타입의 결과를 반환
+            false - 0 
+            true - 1 
+
+
+            좌항            우항            논리합          논리곱
+            true(1)        true(1)         true(2)         true(1)
+            false(0)       true(1)         true(1)         false(0)
+            true(1)        false(0)        true(1)         false(0)
+            false(0)       false(0)        false(0)        false(0)
+        */
+
+        let bool1 = false;
+        let bool2 = (4 < 2); //false
+        //       false || (4 < 2)
+        //       false || false
+        // 둘중에 하나라도 식이 참이면 참(true)
+        result = bool1 || bool2;
+        console.log("bool1 || bool2 : ", result);
+
+        //       !false || (4 < 2)
+        //         true || false
+        result = !bool1 || bool2;
+        console.log("!bool1 || bool2 : ", result);
+
+        // 둘 다 참일때만 참 나머지는 거짓
+        //        false && false
+        result = bool1 && bool2;
+        console.log("bool1 && bool2 : ", result);
+
+        //        true && false
+        result = !bool1 && bool2;
+        console.log("!bool1 && bool2 : ", result);
+
+        //         true && true
+        result = !bool1 && !bool2;
+        console.log("!bool1 && !bool2 : ", result);
+
+        /*
+            대입연산자와 복합대입연산자
+            +=, -=, *=, /=, %=
+            code를 줄여주는 연산자
+        */
+
+        let x = 3;
+        let y = 6;
+        // x에 저장된 값과 y에 저장된 값을 더하여 x라는 변수에 재할당
+        x = x + y;
+        console.log(x);
+        x = x + y;
+        console.log(x);
+
+        /*
+        대입되는 변수가 피연산자로 사용될 때 사용할 수 있는 연산자가 복합대입연산자
+        */
+
+        // x = x + y; 와 같은 의미
+        x += y;  
+        console.log(x);
+        // x = x - y;
+        x -= y;
+        console.log(x);
+        // x = x * y;
+        x *= y;
+        console.log(x);
+        // x = x / y;
+        x /= y;
+        console.log(x);
+        console.log(y);
+
+
+        let count = 0;
+        //연산된 결과를 count에 대입
+        count = count + 1;
+        //좌항과 우항을 더한 뒤 좌항의 변수에 대입
+        count += 1;
+        //증가하는 값이 1이라면
+        //증감연산자를 이용하여 처리
+        //후위 연산
+        count++;
+        console.log(count);
+
+        // 감소
+        count = count - 1;
+        count -= 1;
+        count--;
+        console.log(count);
+
+        //전위 연산
+        ++count;
+        console.log(count);
+        --count;
+        console.log(count);
+
+        //count == 0
+        //result = count;
+        //count = count + 1;
+        result = count++; //증감연산자가 뒤에있으면 변수부터 인식
+        console.log("result : ", result);
+        console.log("count : ",count);
+
+        result = ++count; //증감연산자가 앞에 있으면 연산부터 이루어짐
+        console.log("result : ", result);
+        console.log("count : ",count);
+
+        //result 2, count 2
+        console.log(++count > 2); //결과 : true
+        //후위 연산을 하면 변순부터 인식해서 false 나옴
+    </script>
+</body>
+</html>

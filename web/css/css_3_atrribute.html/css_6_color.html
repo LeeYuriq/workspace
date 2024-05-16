@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <style>
+        .box{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .red{
+            /* RGB 순서 : RED,  GREEN,  BLUE 
+                         0~255  0~255  0~255
+                0에 가까울수록 어두워짐(black)
+                100에 가까울수록 밝아짐(white) */
+            background-color: rgb(255,0,0);
+        }
+
+        .green{
+            background-color: rgb(0,255,0);
+        }
+
+        .blue{
+            /* 0 ~ F까지 16까지 수를 색상으로 표현 */
+            background-color: #0000ff;
+            background-color: #00f;
+            /* background-color: blue; */
+        }
+
+        .white{
+            /* background-color: #ffffff; */
+            background-color: #fff;
+        }
+
+        .black{
+            /* background-color: #000000; */
+            background-color: #000;
+        }
+
+        .select{
+             background-color: #ffee00;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box*6 -->
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box white"></div>
+    <div class="box black"></div>
+    <div class="box select"></div>
+</body>
+</html>

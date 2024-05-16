@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :root 가상의 최상위 요소 선택자 */
+        :root{
+            /* '--' 뒤에 임의로 이름을 부여해주고 ':'뒤에 지정값을 설정함 */
+            --text-content-color:skyblue;
+            --text-content-size:30px;       
+            --before-color:yellow;
+            --after-color:blue;
+
+        }
+
+        .before{
+            color: var(--text-content-color);
+        }
+
+        /* p뒤에 공백이 없으면 p태그의 before라는 class
+           p뒤에 공백이 있으면 p태그의 후손선택자 중에 before라는 class를 가진 곳을 찾음 */
+        p.before{
+            color: pink;
+        }
+
+        /* 가상선택자
+        선택자::가상요소 */
+        p.before::before{
+            content : "before는 앞에 추가됩니다.";
+            color: var(--before-color);
+        }
+
+        .after::after{
+            content : "after는 뒤에 추가됩니다.";
+            color: blue;
+        }
+
+        .line{
+            /* var안에 임의로 이름과 값을 지정한 이름이 오타나면 지정된 값이 안나올 수 있음, 그럴때는 쉼표를 기준으로 뒤에 값을 따로 지정하면된다 */
+            color: var(--test-content-color,blue);
+            font-size: var(--text-content-size,40px);
+            background-color: var(--text-content-color);
+        }
+
+        /* first-line : 브라우저의 크기에 따라 첫번째 라인에만 값 적용 */
+        .line::first-line{
+            color: red;
+        }
+
+        /* first-letter : 첫번째 글자에만 값 적용 */
+        .line::first-letter{
+            color: hotpink;
+        }
+
+        /* selection : 드래그했을때 나오는 값 */
+        p::selection{
+            background-color: pink;
+            color: skyblue;
+        }
+
+        /* letter-spacing : 글자간 간격, 자간 */
+        input[type=text]{
+            color:skyblue;
+            letter-spacing: 3px;
+        }
+
+        input[type=text]::placeholder{
+            color:pink;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- p.before{before 예시} -->
+    <p class="before">before예시</p>
+    <!-- div.before{div before} -->
+    <div class="before">div before</div>
+    <!-- p.after{after 예시} -->
+    <p class="after">after 예시</p>
+    <p class="before after">before after예시</p>
+
+    <!-- p.line -->
+    <p class="line">
+        <!-- lorem -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, doloribus tempora! Harum earum, voluptatum, quam quaerat minima esse, amet atque nihil repellat ipsa magni culpa. Natus consectetur optio perspiciatis esse!
+    </p>
+
+    <input type="text" placeholder="테스트용 문구 작성"/>
+    
+</body>
+</html>
