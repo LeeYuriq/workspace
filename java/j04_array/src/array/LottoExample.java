@@ -36,6 +36,7 @@ public class LottoExample {
 			count++;
 			//lotto 배열 각 인덱스에 1 ~ 45 까지의 난수를 저장
 			lotto[i] = (int)(Math.random()*45) + 1;
+			// 중복방지
 			for(int j = 0; j < i ; j++) {
 				if(lotto[i] == lotto[j]) {
 					i --;
