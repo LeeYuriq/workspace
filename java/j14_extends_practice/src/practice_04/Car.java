@@ -7,6 +7,7 @@ public class Car {
 	int speed;
 	int gear;
 	
+	
 	//기본생성자
 	Car(){}
 	
@@ -30,8 +31,11 @@ public class Car {
 	 	현재 class 옆에 보이지 않지만 Object class를 상속받으며,
 	 	toString()메소드를 사용하여 문자열 양식을 작성하면, 작성한 문자열 타입으로 반환함.
 	 */
+	// alt + s, v : 상속받고 있는 메소드
+	@Override //상속받은거 맞는지 확인해주는것, 형태가 같아야함
+	// alt + s, s, s  : toString메소드 필드 자동선택
 	public String toString() {
-		return "Car [color=" +color+ " speed=" +speed+ " gear=" +gear+ "]";
+		return "Car [color=" +this.color+ " speed=" +this.speed+ " gear=" +this.gear+ "]";
 	}//end toString method
 	
 	
