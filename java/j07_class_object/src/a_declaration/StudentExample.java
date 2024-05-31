@@ -50,7 +50,7 @@ public class StudentExample {
 	// main method			문자열배열
 	public static void main(String[] args) {
 		Student s1; // Student 타입의 객체를 저장할 변수 s1 선언
-		s1 = new Student(); // 인스턴스 생성 후 위치를 s1 변수에 저장
+		s1 = new Student(); // 인스턴스 생성 후 위치를 s1 변수에 저장  
 		System.out.println(s1);
 		
 		Student s2 = new Student(); // 선언과 동시에 객체생성과 초기화
