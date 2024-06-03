@@ -22,6 +22,7 @@ public class RunClass {
 		System.out.println(array.size());
 		System.out.println(array);
 		
+
 	}
 
 }

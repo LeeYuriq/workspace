@@ -14,19 +14,20 @@ public class Practice01ArraysRandomExample {
 		
 		int[] arrays = new int[10];	// 10개의 정수값을 저장할 배열
 		
-		Random random = new Random();
-		
+		Random random = new Random(); // import 추가
+		// 무작위 boolean, int, double 값을 추출, Math.random() == random.nextDouble()
 		for(int i = 0; i < arrays.length; i++ ) {
-			int result = random.nextInt(100) + 1;
-			arrays[i] = result;
+		// 				0 <= ~ < 100	
+			arrays[i] = random.nextInt(100) + 1;	// 1 <= ~ < 100 + 1
 		}// end for 
 		
-		System.out.print("최초의 리스트 : ");
-		System.out.println(Arrays.toString(arrays));
+		System.out.print("최초의 리스트 : " + Arrays.toString(arrays));
+		System.out.println();
 		
+		// 배열 각 항목의 값을 오름차순으로 정렬
 		Arrays.sort(arrays);
-		System.out.print("정렬된 리스트 : ");
-		System.out.println(Arrays.toString(arrays));
+		
+		System.out.print("정렬된 리스트 : " + Arrays.toString(arrays));
 		
 	}// end main method
 
