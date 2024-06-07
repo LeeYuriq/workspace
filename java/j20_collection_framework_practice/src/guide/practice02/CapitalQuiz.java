@@ -49,12 +49,14 @@ public class CapitalQuiz {
 		System.out.printf("현재 %d개 나라와 수도가 입력되어 있습니다.", (int)store.size());
 		System.out.println();
 		
+		/*
 		while() {
 			System.out.printf("국가 입력(현재:%d번째 국가 등록 / q는 종료)>>", (int)store.size()+1);
 			System.out.println();
 			String ct = sc.next();
 			String cp = sc.next();
 		}
+		*/
 		
 
 	}// end input method
