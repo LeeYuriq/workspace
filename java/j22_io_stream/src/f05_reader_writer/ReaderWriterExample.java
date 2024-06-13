@@ -9,6 +9,7 @@ public class ReaderWriterExample {
 		// local network 파일 읽기
 		// \\10.100.205.231
 		String path = "\\\\10.100.205.231\\public\\etc\\강사 연락처 및 공유폴더.txt";
+
 		
 		Reader reader = null;
 		Writer writer = null;

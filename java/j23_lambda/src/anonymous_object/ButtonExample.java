@@ -1,0 +1,74 @@
+package anonymous_object;
+
+public class ButtonExample {
+
+	public static void main(String[] args) {
+
+		// 화면에 사용자와 상호작용이 가능한 버튼을 배치 한다.
+		// <button>로그인</button>
+		// <input type="button" value="회원가입"/>
+		
+		Button loginBtn = new Button("로그인");
+		LoginOnClickListener listener = new LoginOnClickListener();
+		loginBtn.setOnClickListener(listener);
+		loginBtn.onTouch();
+		
+		Button joinBtn = new Button("회원가입");
+		OnClickListener joinListener = new JoinOnClickListener();
+		joinBtn.setOnClickListener(joinListener);
+		joinBtn.onTouch();
+		
+		Button sendMessage = new Button("SEND");
+		// 익명 구현 객체
+		OnClickListener messageListener = new OnClickListener() {
+
+			@Override
+			public void onClick() {
+				System.out.println("SEND MESSAGE !!!!");
+			}
+			
+		};
+		sendMessage.setOnClickListener(messageListener);
+		System.out.println(sendMessage);
+		sendMessage.onTouch();
+		
+		Button delete = new Button("삭제");
+		delete.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick() {
+				System.out.println("회원 정보 삭제!!!");
+			}
+		});
+		delete.onTouch();
+		
+		/*
+		  interface OnClickListener{
+			void onClick();
+			}  
+		 */
+		
+		
+		Button mainBtn = new Button("Main");
+		/*
+		 	OnClickListener messageListener = new OnClickListener() {
+
+			@Override
+			public void onClick() {
+				System.out.println("SEND MESSAGE !!!!");
+			}
+		};
+		 */
+		
+		// lambda 표현식
+		// ()->{}
+		// 전달될 타입이 정해져있고, 기능을 구현할 메소드가 하나면 이 기능만 정의하라 
+		// 기능이 두개면 람다식 안됨.
+		OnClickListener mainListener = ()->{
+			System.out.println("Main 으로 이동");
+		};
+		mainBtn.setOnClickListener(mainListener);
+		
+	}
+
+}

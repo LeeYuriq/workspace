@@ -9,7 +9,8 @@ public class OutputStreamExample {
 
 	public static void main(String[] args) {
 
-		String path = "C:\\Temp\\file2.txt";
+		//String path = "C:\\Temp\\file2.txt";
+		String path = "\\\\10.100.205.231\\public\\etc\\랄랄라.txt";
 		
 		try {
 			// 지정된 경로에 디렉토리가 존재할 경우.
@@ -17,6 +18,7 @@ public class OutputStreamExample {
 			// 파일을 생성하고 그 정보를 저장한다.
 			// 기존에 파일이 존재할 경우 존재하는 파일 정보를 저장
 			// OutputStream os = new FileOutputStream(path);
+			
 			// new FileOutputStream("출력할 파일","이어쓰기 여부");
 			OutputStream os = new FileOutputStream(path,true);
 			String str = "한글";

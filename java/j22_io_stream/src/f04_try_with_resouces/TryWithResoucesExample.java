@@ -20,7 +20,7 @@ public class TryWithResoucesExample {
 				OutputStream os = new FileOutputStream(copyPath);) {
 			
 			
-			int data; // 입력스트림을 통해서 읽어들이 byte 값이 저장
+			int data; // 입력스트림을 통해서 읽어들어 byte 값이 저장
 			while((data = is.read()) != -1) {
 				System.out.println(data);
 				os.write(data);

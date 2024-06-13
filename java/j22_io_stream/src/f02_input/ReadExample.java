@@ -15,7 +15,7 @@ public class ReadExample {
 		System.out.println(file.length());
 		
 		try {
-			// IOStream 객체가 생성됨과 도잇에 파이로가 연결된 상태
+			// IOStream 객체가 생성됨과 동시에 파일 연결된 상태
 			InputStream is = new FileInputStream(file);
 			byte[] bytes = new byte[100];
 			// IOStream에 연결된 파일 정보를 매개변수로

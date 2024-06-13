@@ -21,7 +21,7 @@ public class FileInputStreamExample {
 			while(true) {
 				// 1byte 단위로 읽어와서 byte를 int type으로 반환
 				readByte = is.read();
-				System.out.println(readByte);
+				System.out.print(readByte+" ");
 				// EOF - EndOfFile
 				// read()는 더이상 읽을 파일 정보가 존재하지 않으면
 				// -1을 반환
