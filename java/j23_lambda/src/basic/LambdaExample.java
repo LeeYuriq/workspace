@@ -17,7 +17,7 @@ public class LambdaExample {
 		// 정의해야할 기능이 하나라면 lambda 표현식으로 생략 가능
 		myInterface = ()->{
 			System.out.println("lambda expression call run");
-		};
+		};  
 		myInterface.run();
 		
 		

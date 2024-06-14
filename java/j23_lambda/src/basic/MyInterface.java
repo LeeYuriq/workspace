@@ -11,12 +11,14 @@ public interface MyInterface {
 
 
 // 매개변수가 있는 interface 의 추상 메소드 
+@FunctionalInterface
 interface MyParamInterface{
 	void sum(int x, int y);
 }
 
 
 // 매개변수가 return type이 있는 함수형 인터페이스
+@FunctionalInterface
 interface MyReturnInterface{
 	int method(int x, int y, String str);
 }
