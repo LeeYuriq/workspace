@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js_dom/02_calc.html</title>
+</head>
+<body>
+	<input type="number" id="first" autofocus tabindex="1" /> +
+	<input type="number" id="second" tabindex="2" /> =
+	<input type="text" id="result" readonly /> <br/>
+	<input onclick=result type="button" value="결과확인" tabindex="3" />
+
+	<script>
+		/*
+			button 이 클릭되었을 때 
+			first tag 요소의 value 값과
+			second tag 요소의 value 값을 더한 결과를
+			result 태그요소의 value 에 출력
+		*/
+		
+		let f = document.getElementById("first");
+
+		let s = document.getElementById("second");
+
+		let result = document.getElementById("result");
+		
+		let b = document.querySelector("input[type='button']") ;
+		
+		b.onclick = ()=>{
+			result.value = parseInt(f.value) + parseInt(s.value);
+		};
+		
+			
+	</script>
+
+</body>
+</html>
