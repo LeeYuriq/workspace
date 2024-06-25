@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BOM navigator</title>
+</head>
+<body>
+	<script>
+		// window는 생략 가능
+		console.log(navigator);
+		console.log(window.navigator);
+		
+		
+		for(let key in navigator){
+						// 대괄호를 이용하여 필드이름 가져옴
+			let value = navigator[key];	
+			let str = key + ":" + value;
+			console.log(key);
+			console.log(value);
+			document.write(str+"<br/>");
+		}// end for
+		
+		// 사용 언어
+		let userLang = navigator.language;
+		console.log(userLang);
+		
+		// 사용 브라우저 정보
+		function isMobile(){
+			let user = navigator.userAgent.toLowerCase();
+			if(user.indexOf('android') > -1 ||
+			   user.indexOf('iphone') > -1 ||
+			   user.indexOf('ipad') > -1 ||
+			   user.indexOf('ipod') > -1 ){
+				 return true; // 모바일이다
+			}
+			return false;  // 모바일이 아니다
+		}// end function
+		
+		let is_mobile = isMobile();
+		if(is_mobile){
+			alert('모바일 기기로 접속하셨습니다.'); // true 일 때
+		}else{
+			alert('PC로 접속하셨습니다.'); // false 일 때
+		}
+		
+		
+	</script>
+</body>
+</html>
