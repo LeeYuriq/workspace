@@ -11,6 +11,8 @@
 
     <script>
        // 여기에 JavaScript 코드를 작성
+       /* 
+       	직접한거
        let c = document.getElementById("counter");
        let bi = document.getElementById("increaseButton");
        let bd = document.getElementById("decreaseButton");
@@ -22,7 +24,25 @@
 	   bd.onclick = function(){
 		   c.innerHTML = parseInt(c.innerHTML) - parseInt(1);
 	   };
+	   */
        
+	   // 풀이
+	   // span 태그 내부에 출력될 counter 숫자를 저장할 변수
+		let count = 0;
+
+	   // span#counter
+		let counter = document.getElementById("counter");
+
+		document.getElementById("increaseButton").onclick = function() {
+			count++;
+			counter.innerText = count;
+		};
+		
+		document.getElementById("decreaseButton").onclick = function() {
+			count--;
+			counter.innerText = count;
+		};
+	   
        
        
     </script>
